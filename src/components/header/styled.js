@@ -53,12 +53,15 @@ const Menu = styled.div`
         }
 
         &--open {
-            opacity: ${(props) => props.isOpen ? 0 : 1}
+            z-index: 2;
+            position: relative;
+            opacity: ${(props) => props.isOpen ? 0 : 1};
         }
 
         &--close {
             top: 0;
             left: 0;
+            z-index: 1;
             position: absolute;
 
             .menu-btn__row:nth-child(2) {

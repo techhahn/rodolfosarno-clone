@@ -5,6 +5,8 @@ import { lite, dark} from './styled/themes';
 import { useGlobalState } from './context/globalContext';
 
 import Header from './components/header';
+import Layout from './components/layout';
+import ThemeSwitcher from './components/themeSwitcher';
 
 const App = () => {
   const {theme} = useGlobalState();
@@ -15,6 +17,10 @@ const App = () => {
         <GlobalStyle />
         
         <Header />
+
+        <Layout>
+          <ThemeSwitcher/>
+        </Layout>
 
       </ThemeProvider>
   );

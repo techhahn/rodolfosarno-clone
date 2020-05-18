@@ -1,0 +1,1 @@
+export const THEME_KEY = 'APP_UI_THEME';
