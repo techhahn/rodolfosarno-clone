@@ -39,7 +39,7 @@ const Menu = styled.div`
         }
 
         &__row {
-            height: calc(40px * 0.9);
+            height: 27px;
             display: flex;
             align-items: center;
             flex-direction: column;

@@ -44,22 +44,26 @@ const Switch = styled.div`
 
 const SwitchItem = styled.button`
     border: none;
-    cursor: pointer;
+    cursor: ${(props) => props.isActive ? 'default' : 'pointer'};
     position: relative;
-    padding: 10px 15px 10px 0px;
+    padding: 10px 12px;
     background-color: transparent;
+
+    &:first-child {
+        padding-left: 0;
+    }
 
     &:focus {
         outline: none;
     }
 
     .dot {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         display: block;
         border-radius: 50px;
         border: 1px solid ${(props) => props.theme.fgColor};
-        background-color: ${(props) => props.isActive ? props.theme.fgColor: 'transparent'};
+        background-color: ${(props) => props.isActive ? 'transparent' : props.theme.fgColor};
     }
 `;
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 
+import MagneticPull from '../magnetic/pull';
 import {Logo, Menu, Navigation, NavContainer, NavLink, FooterContainer, NavLinkSM, Dot, LineContainer} from './styled';
 
 const MainLink = ({text}) => {
@@ -76,36 +77,38 @@ const Header = () => {
                 isOpen={menuOpen}
                 onClick={() => setMenuOpen(!menuOpen)}
             >
-                <button className="menu-btn menu-btn--open">
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                </button>
-                <button className="menu-btn menu-btn--close">
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                    <span className="menu-btn__row">
-                        <span className="menu-btn__dot"></span>
-                        <span className="menu-btn__dot"></span>
-                    </span>
-                </button>
+                <MagneticPull>
+                    <button className="menu-btn menu-btn--open">
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                    </button>
+                    <button className="menu-btn menu-btn--close">
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                        <span className="menu-btn__row">
+                            <span className="menu-btn__dot"></span>
+                            <span className="menu-btn__dot"></span>
+                        </span>
+                    </button>
+                </MagneticPull>
             </Menu>
 
             <AnimatePresence>
